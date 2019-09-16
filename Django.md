@@ -253,3 +253,8 @@ polls/index.html에 위와 같이 HTML에 뿌려질 내용을 작성.
 {{ question }}
 ```
 
+
+
+### Reference
+
+https://medium.com/datadriveninvestor/python-django-views-templates-models-f0844a00db70
