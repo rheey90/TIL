@@ -10,7 +10,7 @@ import time
 from selenium import webdriver
 from bs4 import BeautifulSoup
 
-headers = {'Client-ID': 'orr8549md8anh4puxs904dyswcgfb3'}
+headers = {'Client-ID': '< your client id >'}
 
 conn = pymysql.connect(host='localhost', user='root',
                        password=None, db='ilio', charset='utf8mb4') // 데이터베이스를 연결. mysql에 미리 만들어 있어져야 한다.
@@ -52,7 +52,7 @@ finally:
 import pymysql.cursors
 import requests
 
-headers = {'Client-ID': 'orr8549md8anh4puxs904dyswcgfb3'}
+headers = {'Client-ID': '< your client id >'}
 
 conn = pymysql.connect(host='localhost', user='root',
                        password=None, db='ilio', charset='utf8mb4')
