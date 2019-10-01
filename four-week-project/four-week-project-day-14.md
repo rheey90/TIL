@@ -1,0 +1,3 @@
+# 4주 프로젝트 14일차 (2019/10/01)
+
+어제 crontab으로 트위치 API가 작동 시키는 것을 성공하고 오늘은 아프리카 API를 함께 사용해보려고 했다. 트위치 API와 동일한 스크립트를 써서 시도를 해보았지만 urllib.request 모듈을 계속 못 찾는다는 에러 메세지가 계속 떴다. 조사해보니 urllib.request 같은 경우는 python3에서만 돌아가는데 제가 crontab txt 파일에 설정해준 /usr/bin/python은 python3가 아니였던것이다. crontab 같은 경우는 일반적인 환경과 매우 다르기 때문에 파일 위치나 언어 interpreter에 위치를 정확하게 지정해줘야 한다. 그래서 homebrew로 python3을 다시 깔고 /usr/local/bin/python3으로 변경하여 시도해보니 잘 돌아갔다.
