@@ -45,27 +45,27 @@ AWS 계정이 없으신 경우 AWS 가입을 진행해주세요. AWS는 처음 �
 
 AWS 계정을 갖고 계시다면 로그인을 하신 후, AWS 콘솔에서 EC2를 검색하시면 됩니다.
 
-![](/Users/damagedcase/Documents/aws-ec2-nodejs-server-deployment-demo-screenshots/스크린샷 2020-08-31 오후 10.13.31.png)
+![스크린샷 2020-08-31 오후 10.13.31](screenshots/스크린샷 2020-08-31 오후 10.13.31.png)
 
 AWS EC2 콘솔에 접속하셔서 Running instance로 들어갑니다.
 
-![스크린샷 2020-08-31 오후 10.13.44](/Users/damagedcase/Documents/aws-ec2-nodejs-server-deployment-demo-screenshots/스크린샷 2020-08-31 오후 10.13.44.png)
+![스크린샷 2020-08-31 오후 10.13.44](screenshots/스크린샷 2020-08-31 오후 10.13.44.png)
 
 Launch instance로 들어가 생성할 인스턴스를 고릅니다.
 
-![스크린샷 2020-08-31 오후 10.15.33](/Users/damagedcase/Documents/aws-ec2-nodejs-server-deployment-demo-screenshots/스크린샷 2020-08-31 오후 10.15.33.png)
+![스크린샷 2020-08-31 오후 10.15.33](screenshots/스크린샷 2020-08-31 오후 10.15.33.png)
 
 위에서 언급했다시피, AWS에 처음 가입하시면 1년 간 Free-tier 로 사용하실 수 있는데 AWS EC2에 Free-tier 계정을 위한 옵션들이 있습니다! Free-tier eligible라고 써져 있는 걸로 골라서 사용하시면 되는데 저는 ubuntu를 사용하겠습니다.
 
-![스크린샷 2020-08-31 오후 10.16.51](/Users/damagedcase/Documents/aws-ec2-nodejs-server-deployment-demo-screenshots/스크린샷 2020-08-31 오후 10.16.51.png)
+![스크린샷 2020-08-31 오후 10.16.51](screenshots/스크린샷 2020-08-31 오후 10.16.51.png)
 
 Free tier eligible라고 써져있는 t2.micro. Type은 CPU와 RAM 크기에 따라 다 다릅니다. 각자 본인 사용에 맞는 유형은 골라주면 됩니다.
 
-![스크린샷 2020-08-31 오후 10.18.16](/Users/damagedcase/Documents/aws-ec2-nodejs-server-deployment-demo-screenshots/스크린샷 2020-08-31 오후 10.18.16.png)
+![스크린샷 2020-08-31 오후 10.18.16](screenshots/스크린샷 2020-08-31 오후 10.18.16.png)
 
 이제 마지막 단계로 Launch를 누르면 해당 인스턴스가 실행됩니다!
 
-![스크린샷 2020-08-31 오후 10.22.44](/Users/damagedcase/Documents/aws-ec2-nodejs-server-deployment-demo-screenshots/스크린샷 2020-08-31 오후 10.22.44.png)
+![스크린샷 2020-08-31 오후 10.22.44](screenshots/스크린샷 2020-08-31 오후 10.22.44.png)
 
 
 
@@ -73,34 +73,36 @@ Free tier eligible라고 써져있는 t2.micro. Type은 CPU와 RAM 크기에 따
 
 Launch를 클릭하면 바로 인스턴스 리스트 페이지로 바로 이동하지는 않고 터미널로 인스턴스에 접속할 수 있는 pem 키를 생성하셔야 합니다. pem 키를 생성하고 다운로드 할 수 있는 팝업창이 뜰거에요. 뜨면 Create a new key pair를 고르시고 pem 키 파일 이름을 쓰신 후, 다운로드 받으시면 됩니다.
 
-![스크린샷 2020-08-31 오후 10.24.00](/Users/damagedcase/Documents/aws-ec2-nodejs-server-deployment-demo-screenshots/스크린샷 2020-08-31 오후 10.24.00.png)
+![스크린샷 2020-08-31 오후 10.24.00](screenshots/스크린샷 2020-08-31 오후 10.24.00.png)
 
-![스크린샷 2020-08-31 오후 10.24.32](/Users/damagedcase/Documents/aws-ec2-nodejs-server-deployment-demo-screenshots/스크린샷 2020-08-31 오후 10.24.32.png)
+![스크린샷 2020-08-31 오후 10.24.32](screenshots/스크린샷 2020-08-31 오후 10.24.32.png)
 
 다운로드가 완료된 후, Launch Instances를 클릭하시고 View Instances 누르면 인스턴스 리스트 페이지로 넘어가게 됩니다.
 
-![스크린샷 2020-08-31 오후 10.35.54](/Users/damagedcase/Documents/aws-ec2-nodejs-server-deployment-demo-screenshots/스크린샷 2020-08-31 오후 10.35.54.png)
+![스크린샷 2020-08-31 오후 10.35.12](screenshots/스크린샷 2020-08-31 오후 10.35.12.png)
+
+![스크린샷 2020-08-31 오후 10.35.54](screenshots/스크린샷 2020-08-31 오후 10.35.54.png)
 
 빨간 박스 테두리가 있는 인스턴스가 방금 생성한 건데 Status checks가 initializing 중이므로 running으로 바뀔 때까지 기다리시면 됩니다.
 
-![스크린샷 2020-08-31 오후 10.36.30](/Users/damagedcase/Documents/aws-ec2-nodejs-server-deployment-demo-screenshots/스크린샷 2020-08-31 오후 10.36.30.png)
+![스크린샷 2020-08-31 오후 10.36.30](screenshots/스크린샷 2020-08-31 오후 10.36.30.png)
 
 기다시는 동안 Name 쪽에 커서를 옮기면 인스턴스 이름을 지정할 수 있습니다. 나중에 많은 인스턴스를 생성하면 헷갈리수도 있으니 Status checks가 running으로 바뀌는 동안 심심하니 작명을 하겠습니다.
 
-![스크린샷 2020-08-31 오후 10.37.13](/Users/damagedcase/Documents/aws-ec2-nodejs-server-deployment-demo-screenshots/스크린샷 2020-08-31 오후 10.37.13.png)
+![스크린샷 2020-08-31 오후 10.37.13](screenshots/스크린샷 2020-08-31 오후 10.37.13.png)
 
 Status checks가 running으로 바뀌면 접속하실 수 있게 되는데요 IPv4 Public IP로 접속하실 수 있습니다.
 
-![스크린샷 2020-08-31 오후 10.38.02](/Users/damagedcase/Documents/aws-ec2-nodejs-server-deployment-demo-screenshots/스크린샷 2020-08-31 오후 10.38.02.png)
+![스크린샷 2020-08-31 오후 10.38.02](screenshots/스크린샷 2020-08-31 오후 10.38.02.png)
 
 이제 터미널을 여시고 pem 키가 있는 폴더로 들어가신 후, 다음과 같은 커맨드 라인을 치시면...
 
 ```
-chmod 400 <pem key name>.pem
-ssh -i "<pem key name>.pem" ubunutu@<your IPv4 Public IP>
+chmod 400 <your pem key name>.pem
+ssh -i "<your pem key name>.pem" ubunutu@<your IPv4 Public IP>
 ```
 
-![스크린샷 2020-08-31 오후 10.48.27](/Users/damagedcase/Documents/aws-ec2-nodejs-server-deployment-demo-screenshots/스크린샷 2020-08-31 오후 10.48.27.png)
+![스크린샷 2020-08-31 오후 10.48.27](screenshots/스크린샷 2020-08-31 오후 10.48.27.png)
 
 인스턴스에 접속하게 됩니다!
 
@@ -118,7 +120,7 @@ sudo apt install npm
 
 Node.js와 npm 설치가 완료 되었으면 원하시는 디렉토리에다 Node.js 서버를 git clone 해주시면 됩니다. 클론 완료 후, 서버 폴더로 이동하셔서 npm install를 실행하여 필요한 의존성들을 설치해줍니다. 설치가 완료 된 후, node app.js로 서버를 실행시켜 http://<your IPv4 IP Public>:3001으로 접속하고 Hello world!가 뜨는지 볼까요?
 
-![스크린샷 2020-08-31 오후 10.59.55](/Users/damagedcase/Documents/aws-ec2-nodejs-server-deployment-demo-screenshots/스크린샷 2020-08-31 오후 10.59.55.png)
+![스크린샷 2020-08-31 오후 10.59.55](screenshots/스크린샷 2020-08-31 오후 10.59.55.png)
 
 이상하게 사이트에 연결할 수가 없다고 하네요...
 
@@ -126,19 +128,19 @@ Node.js와 npm 설치가 완료 되었으면 원하시는 디렉토리에다 Nod
 
 다시 인스턴스 리스트 페이지로 돌아가 해당 인스턴스를 체크를 한 후, Security groups에 첫 번째 항목에 이름을 기억해 두시고 Security Groups 페이지로 이동합니다.
 
-![스크린샷 2020-08-31 오후 11.04.10](/Users/damagedcase/Documents/aws-ec2-nodejs-server-deployment-demo-screenshots/스크린샷 2020-08-31 오후 11.04.10.png)
+![스크린샷 2020-08-31 오후 11.04.10](screenshots/스크린샷 2020-08-31 오후 11.04.10.png)
 
 페이지로 이동하신 후, Security groups에 첫 번째 항목 이름과 일치하는 항목을 체크해주고 Edit inbound rules를 클릭하세요.
 
-![스크린샷 2020-08-31 오후 11.05.17](/Users/damagedcase/Documents/aws-ec2-nodejs-server-deployment-demo-screenshots/스크린샷 2020-08-31 오후 11.05.17.png)
+![스크린샷 2020-08-31 오후 11.05.17](screenshots/스크린샷 2020-08-31 오후 11.05.17.png)
 
 사용하실 포트 넘버를 입력하시고 다음과 같이 설정해줍니다.
 
-![스크린샷 2020-08-31 오후 11.10.00](/Users/damagedcase/Documents/aws-ec2-nodejs-server-deployment-demo-screenshots/스크린샷 2020-08-31 오후 11.10.00.png)
+![스크린샷 2020-08-31 오후 11.10.00](screenshots/스크린샷 2020-08-31 오후 11.10.00.png)
 
 Save rules를 다시 클릭하고 아까 전 URL로 다시 이동하시면
 
-![스크린샷 2020-08-31 오후 11.10.29](/Users/damagedcase/Documents/aws-ec2-nodejs-server-deployment-demo-screenshots/스크린샷 2020-08-31 오후 11.10.29.png)
+![스크린샷 2020-08-31 오후 11.10.29](screenshots/스크린샷 2020-08-31 오후 11.10.29.png)
 
 Hello world!가 뜨는걸 볼 수 있습니다! 하지만 여기서 끝이 아닙니다. node app.js로 서버를 실행 시켰는데 터미널에서 인스턴스를 나올려면 어쩔 수 없이 서버를 꺼야하죠... 그렇다고 계속 터미널을 실행 시킬 수도 없고요... 하지만 이를 문제를 해결해주는 프로그램이 있습니다!
 
@@ -152,11 +154,9 @@ pm2를 설치하시고 설치가 완료된 후 app.js가 있는 폴더로 이동
 pm2 start app.js
 ```
 
-![스크린샷 2020-08-31 오후 11.14.06](/Users/damagedcase/Documents/aws-ec2-nodejs-server-deployment-demo-screenshots/스크린샷 2020-08-31 오후 11.14.06.png)
+![스크린샷 2020-08-31 오후 11.14.06](screenshots/스크린샷 2020-08-31 오후 11.14.06.png)
 
 실행 후 status가 online이면 ubuntu 터미널을 닫아도 서버가 계속 실행됩니다.
-
-
 
 ## References
 
